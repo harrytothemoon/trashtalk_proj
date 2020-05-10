@@ -4,7 +4,7 @@
 
 ## 專案畫面
 
-![專案畫面](/Screen Shot 2020-05-10 at 9.03.13 PM.png)
+![專案畫面](/public/Readme.png)
 
 ## 安裝&使用
 
