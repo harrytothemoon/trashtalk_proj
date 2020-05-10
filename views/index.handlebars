@@ -1,0 +1,66 @@
+<!--  ./views/index.handlebars -->
+<div class="container py-5">
+
+  <div class="row">
+    <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title text-center">你想對誰說幹話？</h3>
+          <hr>
+          <form method="POST" action="/">
+            <div class="card-deck text-center mb-5">
+              <div class="card border-0" style=' height: 12rem'>
+                <img class="card-img-top mb-3"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg"
+                  alt="Card image cap" style=' height: 10rem; box-shadow:2px 2px 2px 2px #cccccc'>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" id="engineer" style="cursor: pointer"
+                    value="engineer" {{#if (eq options.role 'engineer')}} checked {{/if}}>
+                  <label class="form-check-label" for="engineer">
+                    工程師
+                  </label>
+                </div>
+              </div>
+              <div class="card border-0" style=' height: 12rem'>
+                <img class="card-img-top mb-3"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg"
+                  alt="Card image cap" style=' height: 10rem; box-shadow:2px 2px 2px 2px #cccccc'>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" id="designer" style="cursor: pointer"
+                    value="designer" {{#if (eq options.role 'designer')}} checked {{/if}}>
+                  <label class="form-check-label" for="designer">
+                    設計師
+                  </label>
+                </div>
+              </div>
+              <div class="card border-0" style=' height: 12rem'>
+                <img class="card-img-top mb-3"
+                  src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg"
+                  alt="Card image cap" style=' height: 10rem; box-shadow:2px 2px 2px 2px #cccccc'>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="role" id="entrepreneur" style="cursor: pointer"
+                    value="entrepreneur" {{#if (eq options.role 'entrepreneur')}} checked {{/if}}>
+                  <label class="form-check-label" for="entrepreneur">
+                    創業家
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group form-row text-center justify-content-center">
+              <button class="btn btn-outline-dark mb-3 center" type="submit">Generate Trash Talk</button>
+              <div class="alert alert-dark col-md-12 bg-dark" role="alert">
+                <code style='color:rgb(245, 226, 207); font-size: 18px'>{{#if trashTalk}} {{trashTalk}} 
+                  {{else}} 請選擇任一職業。 {{/if}}</code>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <small class="card-footer text-muted text-right">
+          Idea is inspired by <a href="" target="_blank">AlphaCamp</a>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
