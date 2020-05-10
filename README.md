@@ -4,7 +4,7 @@
 
 ## 專案畫面
 
-![專案畫面](/public/Readme.png)
+![專案畫面](/Public/Readme.png)
 
 ## 安裝&使用
 
